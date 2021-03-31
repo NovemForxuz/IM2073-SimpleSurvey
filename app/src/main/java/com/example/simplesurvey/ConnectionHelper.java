@@ -12,10 +12,10 @@ public class ConnectionHelper {
     String IP, DB, DBUserName, DBPassword;
     @SuppressLint("NewApi")
     public Connection connections(){
-        IP = "10.0.2.2";
-        DB = "android";
-        DBUserName = "myuser";
-        DBPassword = "password123";
+        IP = "10.0.2.2";    //android device's local
+        DB = "android";     //databaseName
+        DBUserName = "myuser";  //userName
+        DBPassword = "password123";     //password
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
