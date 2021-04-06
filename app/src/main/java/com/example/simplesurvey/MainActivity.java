@@ -1,3 +1,6 @@
+/*-----PRESENTATION LAYER (Main)-----*/
+//should be as dumb as possible (no business logic)
+
 package com.example.simplesurvey;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -5,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     protected static final String DB_MESSAGE = "database";
@@ -13,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Get questions from db
+        downloadJSON();
     }
 
     /**Callback when the user selects the "Database" button*/
@@ -23,5 +30,12 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(DB_MESSAGE, message);   //key-value pair
         //Start the intended activity
         startActivity(intent);
+    }
+
+    /**Downloading db content form web*/
+    private void downloadJSON(){
+        //Connection to retrieve db query
+        ConnectionHelper getJSON = new ConnectionHelper();
+        getJSON.execute();
     }
 }

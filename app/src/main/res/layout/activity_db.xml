@@ -1,41 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7">
 
     <TextView
-        android:id="@+id/dbTextViewID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.539" />
-
-    <Button
-        android:id="@+id/btnBackID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:text="BACK"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dbTextViewID"
-        android:onClick="goBackHandler"/>
-
-    <ListView
-        android:id="@+id/lvTableID"
+        android:id="@+id/dbQnNoID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/dbTextViewID"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="TextView" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/dbQnTVID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btnAnsAID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="loadQuestions"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btnAnsBID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="loadQuestions"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btnAnsCID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="loadQuestions"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/btnAnsDID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="loadQuestions"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBackID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="goBackHandler"
+            android:text="BACK" />
+
+        <Button
+            android:id="@+id/btnNextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Next" />
+
+    </LinearLayout>
+
+</LinearLayout>
