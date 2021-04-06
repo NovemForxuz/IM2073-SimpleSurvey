@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
+//TODO: Starting page user interface
+
 public class MainActivity extends AppCompatActivity {
     protected static final String DB_MESSAGE = "database";
 

@@ -19,6 +19,8 @@ import com.example.simplesurvey.Model.QuestionaireViewModel;
 /*DBactivity <--> QuestionaireVM
 *
 */
+  //TODO: INSERT user Responses into MySQL via php
+
 public class DatabaseActivity extends AppCompatActivity {
 
     //Declare UI objects
@@ -96,6 +98,7 @@ public class DatabaseActivity extends AppCompatActivity {
                 Log.e("Btn get callback", e.getMessage());
                 qnIndex--;
             }
+            //Reload UIs
             try {
                 qnNoTv.setText("Question " + qvm.getQuestionNo() + " of " + qvm.getTotalQns());
                 qnTv.setText(String.valueOf(qvm.getQuestion()));
@@ -118,7 +121,7 @@ public class DatabaseActivity extends AppCompatActivity {
 
     }
 
-    /*Downloading db content form web*/
+    /*Downloading db queries from web*/
     private void downloadJSON(){
         //Connection to retrieve db query
         ConnectionHelper getJSON = new ConnectionHelper();
