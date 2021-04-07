@@ -23,7 +23,7 @@ public class ConnectionHelper extends AsyncTask<Void, Void, String> {
 
     public ConnectionHelper (){
         //Initialize url
-        urlWebService = "http://10.27.23.30/api/query_questions.php";
+        urlWebService = "http://192.168.1.223/api/query_questions.php";     //JQ's server thru vpn
         /* Used php to query from MySQL via xampp server,
         *  Change IP address of url to server host's IP address
         */

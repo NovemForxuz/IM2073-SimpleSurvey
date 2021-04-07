@@ -20,7 +20,6 @@ import com.example.simplesurvey.Model.QuestionaireViewModel;
 /*DBactivity <--> QuestionaireVM
 * DBactivity ---> AnswernaireVM
 */
-  //TODO: INSERT user Responses into MySQL via php
 
 public class DatabaseActivity extends AppCompatActivity {
 

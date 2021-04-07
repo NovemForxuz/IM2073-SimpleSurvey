@@ -37,12 +37,23 @@ public class QnRepository {
         String[] questionaire = new String[jsonArray.length()];
         for (int i=0; i< jsonArray.length(); i++){
             JSONObject obj = jsonArray.getJSONObject(i);
-            questionaire[i] = obj.getString("questionNO") + ". "
+            //Local db format
+            /*questionaire[i] = obj.getString("questionNO") + ". "
                     + obj.getString("question")
                     + "\nA. " + obj.getString("answerA")
                     + "\nB. " + obj.getString("answerB")
                     + "\nC. " + obj.getString("answerC")
                     + "\nD. " + obj.getString("answerD")
+                    + "\nTime: " + obj.getString("time")
+                    + "\n" + obj.getString("Description");*/
+
+            //JQ db format
+            questionaire[i] = obj.getString("questionNO") + ". "
+                    + obj.getString("question")
+                    + "\nA. " + obj.getString("anwsera")
+                    + "\nB. " + obj.getString("anwserb")
+                    + "\nC. " + obj.getString("anwserc")
+                    + "\nD. " + obj.getString("anwserd")
                     + "\nTime: " + obj.getString("time")
                     + "\n" + obj.getString("Description");
         }
