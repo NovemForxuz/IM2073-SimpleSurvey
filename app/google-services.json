@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "72069722852",
+    "project_id": "simplesurvey-a98ec",
+    "storage_bucket": "simplesurvey-a98ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72069722852:android:8d30c6542b1dfcbd68f2f1",
+        "android_client_info": {
+          "package_name": "com.example.simplesurvey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72069722852-i7e3q8tkdjgrg0i2n5mf8rse93c4qmqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2hftWelAgcx5vSmH5BB9wKduxdE-buwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72069722852-i7e3q8tkdjgrg0i2n5mf8rse93c4qmqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

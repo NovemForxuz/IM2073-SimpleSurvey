@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +27,7 @@ public class DatabaseActivity extends AppCompatActivity {
     //Declare UI objects
     private TextView qnTv, qnNoTv;
     private Button btnA, btnB, btnC, btnD;
+    private ProgressBar progBar;
     private String username;
 
     //Declare Communication classes
@@ -58,6 +60,10 @@ public class DatabaseActivity extends AppCompatActivity {
         avm = AnswernaireViewModel.getInstance();
 
         /*Bind UI objects and initialize UIs*/
+        progBar = findViewById(R.id.dbQnNoBarID);
+        progBar.setMax(qvm.getTotalQns());
+        progBar.setProgress(qvm.getQuestionNo());
+
         qnNoTv = findViewById(R.id.dbQnNoID);
         qvm.setQuestionNo(qnIndex);
         qnNoTv.setText("Question " + qvm.getQuestionNo() + " of " + qvm.getTotalQns());
