@@ -25,7 +25,7 @@ public class ConnectionHelper extends AsyncTask<Void, Void, String> {
         //Initialize url
         urlWebService = "http://10.27.23.30/api/query_questions.php";
         /* Used php to query from MySQL via xampp server,
-        *  Change IP address of url to Host's IP address
+        *  Change IP address of url to server host's IP address
         */
 
         dbViewModel = QnRepository.getInstance();

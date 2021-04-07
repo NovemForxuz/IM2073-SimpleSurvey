@@ -13,22 +13,25 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.simplesurvey.Model.AnswernaireViewModel;
 import com.example.simplesurvey.Model.QuestionaireViewModel;
 
 /**-----Communications-----*/
 /*DBactivity <--> QuestionaireVM
-*
+* DBactivity ---> AnswernaireVM
 */
   //TODO: INSERT user Responses into MySQL via php
 
 public class DatabaseActivity extends AppCompatActivity {
 
     //Declare UI objects
-    TextView qnTv, qnNoTv;
-    Button btnA, btnB, btnC, btnD;
+    private TextView qnTv, qnNoTv;
+    private Button btnA, btnB, btnC, btnD;
+    private String username;
 
     //Declare Communication classes
     QuestionaireViewModel qvm;
+    AnswernaireViewModel avm;
 
     //Intent message
     protected static final String DB_COMPLETE_MESSAGE = "database";
@@ -42,16 +45,18 @@ public class DatabaseActivity extends AppCompatActivity {
         //Get the message from the intent (MainActivity)
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.DB_MESSAGE);
+        username = intent.getStringExtra(MainActivity.USERNAME);
 
         //Get the display TextView for this activity and display the message
         TextView dbTV = findViewById(R.id.dbQnNoID);
         dbTV.setText(message);
 
-        //Retrieve database queries
+        //Retrieve database question queries
         downloadJSON();
 
-        //Construct QuestionaireViewModel
+        //Construct ViewModels
         qvm = new QuestionaireViewModel();
+        avm = AnswernaireViewModel.getInstance();
 
         /*Bind UI objects and initialize UIs*/
         qnNoTv = findViewById(R.id.dbQnNoID);
@@ -84,6 +89,17 @@ public class DatabaseActivity extends AppCompatActivity {
 
     /*Callback when user select the answer buttons*/
     public void loadQuestions(View view){
+        //Selected button will trigger an insert query into db
+        Button btnSelected = findViewById(view.getId());        //Get id of selected button
+        String ansTxt = btnSelected.getText().toString();       //String formatting...
+        String choice = String.valueOf(ansTxt.charAt(0));
+        String answer = ansTxt.substring(ansTxt.indexOf(" ")+1, ansTxt.length()-1);
+
+        loadResponses(String.valueOf(qvm.getQuestionNo()), choice, answer, username,"" );
+        Log.i("BtnSelected", "qNo:"+qvm.getQuestionNo()+",choice:"+choice+",answer:"+answer);
+        enqueueConnection();
+
+        //Increment index for next qn
         qnIndex++;
         if(qnIndex < qvm.getTotalQns()){
             //Re-initialize UIs
@@ -119,6 +135,26 @@ public class DatabaseActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+    }
+
+    /*Load responses to insert DB*/
+    private void loadResponses(String qnNo, String choice, String answer, String username, String comments){
+        avm.setQuestionNO(qnNo);
+        avm.setChoice(choice);
+        avm.setAnswer(answer);
+        avm.setUsername(username);
+        avm.setComments(comments);
+    }
+
+    /*Uploading db responses through web*/
+    public void enqueueConnection(){
+        //Connection to insert db query
+        ConnectionInsert connectionInsert = new ConnectionInsert();
+        try {
+            connectionInsert.connections();
+        }catch (Exception e){
+            Log.e("DBactivity enQ", e.getMessage());
+        }
     }
 
     /*Downloading db queries from web*/
