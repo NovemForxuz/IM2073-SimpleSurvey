@@ -1,11 +1,11 @@
 /*Communication with Remote Data Source*/
 
-package com.example.simplesurvey;
+package com.example.simplesurvey.Service;
 
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.simplesurvey.Model.QnRepository;
+import com.example.simplesurvey.QnRepository;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -19,16 +19,16 @@ import java.net.URL;
 public class ConnectionHelper extends AsyncTask<Void, Void, String> {
 
     private String urlWebService;
-    private QnRepository dbViewModel;
+    private QnRepository dbRepository;
 
     public ConnectionHelper (){
         //Initialize url
-        urlWebService = "http://192.168.1.223/api/query_questions.php";     //JQ's server thru vpn
+        urlWebService = "http://10.27.23.30/api/query_questions.php";
         /* Used php to query from MySQL via xampp server,
         *  Change IP address of url to server host's IP address
         */
 
-        dbViewModel = QnRepository.getInstance();
+        dbRepository = QnRepository.getInstance();
     }
 
     //Retrieve questions queries from database
@@ -60,7 +60,7 @@ public class ConnectionHelper extends AsyncTask<Void, Void, String> {
 
         //Storing data into Repository
         try {
-            dbViewModel.setQuestionaire(s);
+            dbRepository.setQuestionaire(s);
             Log.i("PostExecute", "listView loaded.");
             Log.i("PostExecute", s);
         }catch (Exception e){

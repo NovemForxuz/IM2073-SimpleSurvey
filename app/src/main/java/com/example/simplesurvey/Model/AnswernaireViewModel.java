@@ -1,7 +1,5 @@
 package com.example.simplesurvey.Model;
 
-import com.example.simplesurvey.ConnectionInsert;
-
 /**-----Communications-----*/
 /* AnswernaireVM <--- DBactivity
  * AnswernaireVM <--- ConnectionInsert

@@ -73,6 +73,14 @@ public class QuestionaireViewModel {
         answerD = questionSet[index].substring(indexStart, indexEnd);
     }
 
+    public void setTime(int index){
+        //Getting a part (time) of the string, via substring, at respective index of questionSet
+        int indexStart = questionSet[index].indexOf("Time:") + 5;
+        int indexEnd = questionSet[index].indexOf("Desc:");
+        time = questionSet[index].substring(indexStart, indexEnd);
+        Log.i("Time captured: ", time);
+    }
+
     /*-----Getters-----*/
     public int getQuestionNo(){
         return questionNo;
@@ -96,6 +104,10 @@ public class QuestionaireViewModel {
 
     public String getAnswerD(){
         return answerD;
+    }
+
+    public String getTime(){
+        return  time;
     }
 
     public int getTotalQns(){

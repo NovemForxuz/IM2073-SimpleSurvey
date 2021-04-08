@@ -4,103 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
+    android:gravity="center"
     android:orientation="vertical"
-    android:weightSum="7">
+    android:weightSum="10">
 
     <ProgressBar
         android:id="@+id/dbQnNoBarID"
-        style="?android:attr/progressBarStyleHorizontal"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="1"
+        android:background="#BA00BCD4" />
 
     <TextView
         android:id="@+id/dbQnNoID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
         android:layout_weight="1"
         android:gravity="center"
         android:text="TextView" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/dbQnTVID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
         android:layout_weight="1"
         android:fontFamily="sans-serif-black"
-        android:gravity="center"
+        android:gravity="center|center_horizontal"
         android:singleLine="false"
         android:soundEffectsEnabled="false"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="24dp"
+        app:autoSizeMaxTextSize="24dp"
+        app:autoSizeMinTextSize="10dp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform" />
 
-    <Button
-        android:id="@+id/btnAnsAID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="loadQuestions"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:soundEffectsEnabled="true"
-        android:text="Button"
-        app:backgroundTint="@android:color/holo_orange_dark" />
+    <LinearLayout
+        android:layout_width="342dp"
+        android:layout_height="414dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnAnsBID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="loadQuestions"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:soundEffectsEnabled="true"
-        android:text="Button"
-        app:backgroundTint="@android:color/holo_green_light" />
+        <Button
+            android:id="@+id/btnAnsAID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="choiceBtnHandler"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:soundEffectsEnabled="true"
+            android:text="Button"
+            app:backgroundTint="@color/teal_200" />
 
-    <Button
-        android:id="@+id/btnAnsCID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="loadQuestions"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:soundEffectsEnabled="true"
-        android:text="Button"
-        app:backgroundTint="@color/teal_200" />
+        <Button
+            android:id="@+id/btnAnsBID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="choiceBtnHandler"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:soundEffectsEnabled="true"
+            android:text="Button"
+            app:backgroundTint="@android:color/holo_green_light" />
 
-    <Button
-        android:id="@+id/btnAnsDID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="loadQuestions"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:soundEffectsEnabled="true"
-        android:text="Button"
-        app:backgroundTint="@color/purple_500" />
+        <Button
+            android:id="@+id/btnAnsCID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="choiceBtnHandler"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:soundEffectsEnabled="true"
+            android:text="Button"
+            app:backgroundTint="@android:color/holo_orange_dark" />
+
+        <Button
+            android:id="@+id/btnAnsDID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="choiceBtnHandler"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:soundEffectsEnabled="true"
+            android:text="Button"
+            app:backgroundTint="@android:color/holo_red_light" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnBackID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="goBackHandler"
-            android:text="BACK" />
 
         <Button
             android:id="@+id/btnNextID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:text="Next" />
+            android:onClick="nextBtnHandler"
+            android:text="Next"
+            app:backgroundTint="@color/teal_700" />
 
     </LinearLayout>
 

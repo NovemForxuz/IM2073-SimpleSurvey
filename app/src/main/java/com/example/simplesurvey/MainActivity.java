@@ -7,12 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.simplesurvey.Service.ConnectionHelper;
 
 //TODO: Starting page user interface
 
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public void goDatabaseHandler(View view){
 
         if (userTV.getText().toString().isEmpty()){
-            Toast.makeText(this,"Please enter a name", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Please enter a name", Toast.LENGTH_SHORT).show();
         }else{
             //Create an intent for the second activity
             Intent intent = new Intent(this, DatabaseActivity.class);
@@ -46,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
             String username = userTV.getText().toString();
             intent.putExtra(USERNAME, username);
             //Start the intended activity
-            startActivity(intent);
+            try {
+                startActivity(intent);
+            }catch (Exception e){
+                Toast.makeText(this, "Disable firewall", Toast.LENGTH_SHORT);
+            }
         }
     }
 

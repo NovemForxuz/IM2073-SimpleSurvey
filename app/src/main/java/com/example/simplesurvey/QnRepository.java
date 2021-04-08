@@ -1,7 +1,9 @@
 /*-----DATA LAYER-----*/
 //Where UI data will be stored
 
-package com.example.simplesurvey.Model;
+package com.example.simplesurvey;
+
+import com.example.simplesurvey.Model.QuestionaireViewModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -55,7 +57,7 @@ public class QnRepository {
                     + "\nC. " + obj.getString("anwserc")
                     + "\nD. " + obj.getString("anwserd")
                     + "\nTime: " + obj.getString("time")
-                    + "\n" + obj.getString("Description");
+                    + "\nDesc: " + obj.getString("Description");
         }
         this.questionaire = questionaire;
         qvm = new QuestionaireViewModel(questionaire);

@@ -1,6 +1,6 @@
 /*Communication with Remote Data Source*/
 
-package com.example.simplesurvey;
+package com.example.simplesurvey.Service;
 
 import android.util.Log;
 
@@ -28,7 +28,7 @@ import java.util.Map;
 
 public class ConnectionInsert {
     //Declare connection variables
-    private static final String BASE_URL = "http://192.168.1.223/api/insert_response.php";      //JQ's server thru vpn
+    private static final String BASE_URL = "http://10.27.23.30/api/insert_response.php";
     private OkHttpClient client;
     private RequestBody body;
 

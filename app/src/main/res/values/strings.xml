@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">SimpleSurvey</string>
+    <string name="app_moduleName">Mobile Programming</string>
+    <string name="app_credits">Brought to you by Heriz &amp; JQ</string>
+    
+    //Complete activity
+    <string name="cpt_thankyou">Thank you</string>
+    <string name="cpt_aboutus">About us</string>
+    <string name="cpt_aboutus_desc">
+        We are students of IEM working on our project for Intro to Design and Project.
+        This application was designed by Heriz and Jun Qian
+    </string>
 </resources>
