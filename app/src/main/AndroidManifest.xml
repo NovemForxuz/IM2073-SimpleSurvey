@@ -18,8 +18,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".DatabaseActivity"/>
+        </activity>        <activity android:name=".DatabaseActivity"/>
         <activity android:name=".CompleteActivity"/>
         <meta-data
             android:name="preloaded_fonts"

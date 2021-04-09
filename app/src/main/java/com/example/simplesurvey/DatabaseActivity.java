@@ -36,7 +36,7 @@ public class DatabaseActivity extends AppCompatActivity {
     private Button btnA, btnB, btnC, btnD, btnNext;
     private ProgressBar progBar;
     private String username, time;
-    private boolean isValid;
+    //private boolean isValid;
 
     //Declare Communication classes
     QuestionaireViewModel qvm;
@@ -70,15 +70,14 @@ public class DatabaseActivity extends AppCompatActivity {
         /*Bind UI objects and initialize UIs*/
         qvm.setTime(qnIndex);
         time = qvm.getTime();
-        checkTime();
-
-        progBar = findViewById(R.id.dbQnNoBarID);
-        progBar.setMax(qvm.getTotalQns());
-        progBar.setProgress(qvm.getQuestionNo());
 
         qnNoTv = findViewById(R.id.dbQnNoID);
         qvm.setQuestionNo(qnIndex);
         qnNoTv.setText("Question " + qvm.getQuestionNo() + " of " + qvm.getTotalQns());
+
+        progBar = findViewById(R.id.dbQnNoBarID);
+        progBar.setMax(qvm.getTotalQns());
+        progBar.setProgress(qvm.getQuestionNo());
 
         qnTv = findViewById(R.id.dbQnTVID);
         qvm.setQn(qnIndex);
@@ -103,7 +102,7 @@ public class DatabaseActivity extends AppCompatActivity {
         btnNext = findViewById(R.id.btnNextID);
         btnNext.setVisibility(View.INVISIBLE);
 
-
+        checkTime();
 
         //debug
         qvm.logQuestionSet();
@@ -176,12 +175,12 @@ public class DatabaseActivity extends AppCompatActivity {
         loadQuestions();
     }
 
-    private boolean checkTime(){
+    private void checkTime(){
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
         try {
             Date strDate = format.parse(time);
             if(new Date().before(strDate)){
-                isValid = true;
+
                 btnA.setClickable(true);
                 btnB.setClickable(true);
                 btnC.setClickable(true);
@@ -189,19 +188,19 @@ public class DatabaseActivity extends AppCompatActivity {
                 btnNext.setVisibility(View.INVISIBLE);
                 Log.i("Time compare", time + " is valid");
             }else {
-                isValid = false;
+
                 btnA.setClickable(false);
                 btnB.setClickable(false);
                 btnC.setClickable(false);
                 btnD.setClickable(false);
                 btnNext.setVisibility(View.VISIBLE);
-                Toast.makeText(this, "Question has expired, proceed to next question", Toast.LENGTH_LONG);
+                Toast.makeText(this, "Question has expired, proceed to next question", Toast.LENGTH_LONG).show();
                 Log.i("Time compare", time + " is not valid ");
             }
         } catch (Exception e){
             Log.e("Parse error", e.getMessage());
         }
-        return isValid;
+
     }
 
     /*Load responses to insert DB*/
