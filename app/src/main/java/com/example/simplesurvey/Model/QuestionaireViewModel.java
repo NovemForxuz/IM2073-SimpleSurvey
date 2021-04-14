@@ -1,4 +1,4 @@
-/*-----DATA LAYER-----*/
+/*-----DATA LAYER-----*/ 
 package com.example.simplesurvey.Model;
 
 import android.util.Log;
