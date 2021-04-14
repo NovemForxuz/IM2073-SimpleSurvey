@@ -18,8 +18,8 @@ Objectives:
 
 Test runs:
 
-https://user-images.githubusercontent.com/30825204/114790676-ff7cd580-9d39-11eb-896b-82e2db728e73.mp4
+Full: https://user-images.githubusercontent.com/30825204/114790676-ff7cd580-9d39-11eb-896b-82e2db728e73.mp4
 
-https://user-images.githubusercontent.com/30825204/114789168-867c7e80-9d37-11eb-918d-9ddb120fa23c.mp4
+Live: https://user-images.githubusercontent.com/30825204/114789168-867c7e80-9d37-11eb-918d-9ddb120fa23c.mp4
 
-[WebApp survey dashboard.pdf](https://github.com/NovemForxuz/IM2073-SimpleSurvey/files/6314068/WebApp.survey.dashboard.pdf)
+WebApp: [WebApp survey dashboard.pdf](https://github.com/NovemForxuz/IM2073-SimpleSurvey/files/6314068/WebApp.survey.dashboard.pdf)
