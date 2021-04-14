@@ -1,3 +1,6 @@
+
+
+
 # IM2073-SimpleSurvey
 IM2073 - Android Survey application
 
@@ -13,6 +16,9 @@ Objectives:
 - Data retrieved from php downloaded and displayed on mobile app. 
 - Mobile responses to survey qns uploaded to database via php
 
+Test runs:
+
+https://user-images.githubusercontent.com/30825204/114790676-ff7cd580-9d39-11eb-896b-82e2db728e73.mp4
 
 https://user-images.githubusercontent.com/30825204/114789168-867c7e80-9d37-11eb-918d-9ddb120fa23c.mp4
 
