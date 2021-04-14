@@ -1,7 +1,7 @@
 # IM2073-SimpleSurvey
 IM2073 - Android Survey application
 
-This is a project on survey conducted through mobile and web. The codes here focus mainly on mobile-side of the development.
+A simple survey project that connects Mobile and Web applications through a database. The codes here focus mainly on mobile-side of the development.
 Programs invoved:
 - MySQL
 - Android Studio
