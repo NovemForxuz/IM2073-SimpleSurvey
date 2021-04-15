@@ -28,7 +28,5 @@ Database SELECT query (query_questions.php)
 
 
 Design Pattern (Intermediate)
-Communications
-MainActivity ---> DBActivity <--> QuestionaireVM ---> QnRepository ---> ConnectionHelper
-MainActivity ---> DBActivity ---> AnswernaireVM ---> ConnectionInsert
-MainActivity ---> DBActivity ---> CompleteActivity
+Data flow
+![Data-Flow](https://user-images.githubusercontent.com/30825204/114879256-df8af780-9db5-11eb-95bf-f3c2fada438c.png)
