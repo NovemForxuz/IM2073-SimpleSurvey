@@ -23,3 +23,12 @@ WebApp: [WebApp survey dashboard.pdf](https://github.com/NovemForxuz/IM2073-Simp
 
 Database SELECT query (query_questions.php)
 ![php_questions_query](https://user-images.githubusercontent.com/30825204/114873035-c0896700-9daf-11eb-9d08-14a55d2aa897.PNG)
+
+
+
+
+Design Pattern (Intermediate)
+Communications
+MainActivity ---> DBActivity <--> QuestionaireVM ---> QnRepository ---> ConnectionHelper
+MainActivity ---> DBActivity ---> AnswernaireVM ---> ConnectionInsert
+MainActivity ---> DBActivity ---> CompleteActivity
