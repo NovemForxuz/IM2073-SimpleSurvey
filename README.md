@@ -1,6 +1,3 @@
-
-
-
 # IM2073-SimpleSurvey
 IM2073 - Android Survey application
 
@@ -23,3 +20,6 @@ Full: https://user-images.githubusercontent.com/30825204/114790676-ff7cd580-9d39
 Live: https://user-images.githubusercontent.com/30825204/114789168-867c7e80-9d37-11eb-918d-9ddb120fa23c.mp4
 
 WebApp: [WebApp survey dashboard.pdf](https://github.com/NovemForxuz/IM2073-SimpleSurvey/files/6314068/WebApp.survey.dashboard.pdf)
+
+Database SELECT query (query_questions.php)
+![php_questions_query](https://user-images.githubusercontent.com/30825204/114873035-c0896700-9daf-11eb-9d08-14a55d2aa897.PNG)
