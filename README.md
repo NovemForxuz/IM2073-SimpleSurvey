@@ -10,7 +10,7 @@ Programs invoved:
 
 Objectives:
 - Retrieve data from MySQL database using php 
-- Data retrieved from php downloaded and displayed on mobile app. 
+- Data retrieved from php captured and displayed on mobile app. 
 - Mobile responses to survey qns uploaded to database via php
 
 Test runs:
