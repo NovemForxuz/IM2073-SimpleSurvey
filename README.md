@@ -13,6 +13,11 @@ Objectives:
 - Data retrieved from php captured and displayed on mobile app. 
 - Mobile responses to survey qns uploaded to database via php
 
+
+Start Activity             |  Survey Activity
+:-------------------------:|:-------------------------:
+![StartPage](https://user-images.githubusercontent.com/30825204/115137610-f01cb700-9fdb-11eb-8802-cb1fc7b30a47.PNG)  |  ![Survey Activity](https://user-images.githubusercontent.com/30825204/115137594-d67b6f80-9fdb-11eb-901a-1a0f5137df34.png)
+
 Test runs:
 
 Full: https://user-images.githubusercontent.com/30825204/114790676-ff7cd580-9d39-11eb-896b-82e2db728e73.mp4
@@ -21,12 +26,12 @@ Live: https://user-images.githubusercontent.com/30825204/114789168-867c7e80-9d37
 
 WebApp: [WebApp survey dashboard.pdf](https://github.com/NovemForxuz/IM2073-SimpleSurvey/files/6314068/WebApp.survey.dashboard.pdf)
 
+
 Database SELECT query (query_questions.php)
+:-------------------------:
 ![php_questions_query](https://user-images.githubusercontent.com/30825204/114873035-c0896700-9daf-11eb-9d08-14a55d2aa897.PNG)
 
 
-
-
-Design Pattern (Intermediate)
-Data flow
+Design Pattern (Intermediate) Data flow
+:-------------------------:
 ![Data-Flow](https://user-images.githubusercontent.com/30825204/114879256-df8af780-9db5-11eb-95bf-f3c2fada438c.png)
