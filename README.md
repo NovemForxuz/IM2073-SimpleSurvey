@@ -9,9 +9,9 @@ Programs invoved:
 - XAMPP
 
 Objectives:
-- Retrieve data from MySQL database using php 
-- Data retrieved from php captured and displayed on mobile app. 
-- Mobile responses to survey qns uploaded to database via php
+1. Retrieve data from MySQL database using php 
+2. Data retrieved from php captured and displayed on mobile app. 
+3. Mobile responses to survey qns uploaded to database via php
 
 
 Start Activity             |  Survey Activity
