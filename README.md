@@ -19,7 +19,7 @@ Start Activity             |  Survey Activity
 ![StartPage](https://user-images.githubusercontent.com/30825204/115137610-f01cb700-9fdb-11eb-8802-cb1fc7b30a47.PNG)  |  ![Survey Activity](https://user-images.githubusercontent.com/30825204/115137594-d67b6f80-9fdb-11eb-901a-1a0f5137df34.png)
 
 
-PREVIEW
+Preview:
 
 Full view - Simulated      |  App view - Live (remote)
 :-------------------------:|:-------------------------:
@@ -37,8 +37,3 @@ Design Pattern (Intermediate) Data flow
 :-------------------------:
 ![Data-Flow](https://user-images.githubusercontent.com/30825204/114879256-df8af780-9db5-11eb-95bf-f3c2fada438c.png)
 
-table {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
