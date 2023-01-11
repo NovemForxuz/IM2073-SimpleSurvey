@@ -39,7 +39,7 @@ Database SELECT query (query_questions.php)
 ![php_questions_query](https://user-images.githubusercontent.com/30825204/114873035-c0896700-9daf-11eb-9d08-14a55d2aa897.PNG)
 
 <br>
-The project was further developed to apply separation of concerns using design pattern.
+The project was further attempts to apply separation of concerns using MVVM design pattern.
 <br><br>
 
 Design Pattern (Intermediate) Data flow
