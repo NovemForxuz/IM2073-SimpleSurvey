@@ -39,7 +39,7 @@ Database SELECT query (query_questions.php)
 ![php_questions_query](https://user-images.githubusercontent.com/30825204/114873035-c0896700-9daf-11eb-9d08-14a55d2aa897.PNG)
 
 <br>
-The project further attempted to apply separation of concerns using MVVM design pattern.
+The project further attempted to apply separation of concerns using Model-View-ViewModel design pattern.
 <br><br>
 
 Data flow (MVVM)
